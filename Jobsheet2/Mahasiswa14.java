@@ -6,6 +6,16 @@ public class Mahasiswa14 {
     String kelas;
     double ipk;
 
+    public Mahasiswa14() {
+    }
+
+    public Mahasiswa14(String nama, String nim, double ipk, String kelas) {
+        this.nama = nama;
+        this.nim = nim;
+        this.ipk = ipk;
+        this.kelas = kelas;
+    }
+
     void tampilkanInformasi() {
         System.out.println("Nama: " + nama);
         System.out.println("NIM: " + nim);
@@ -18,12 +28,12 @@ public class Mahasiswa14 {
     }
 
     void updateIpk(double ipkBaru) {
-    if (ipkBaru >= 0.0 && ipkBaru <= 4.0) {
-        ipk = ipkBaru;
-    } else {
-        System.out.println("GPA is invalid. Must be between 0.0 and 4.0");
+        if (ipkBaru >= 0.0 && ipkBaru <= 4.0) {
+            ipk = ipkBaru;
+        } else {
+            System.out.println("GPA is invalid. Must be between 0.0 and 4.0");
+        }
     }
-}
 
     String nilaiKinerja() {
         if (ipk >= 3.5) {
