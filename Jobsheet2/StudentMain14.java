@@ -17,5 +17,13 @@ public class StudentMain14 {
         Mahasiswa14 mhs2 = new Mahasiswa14("Faza", "254107060131", 3.20, "TI-1B");
         mhs2.updateIpk(3.30);
         mhs2.tampilkanInformasi();
+
+        Mahasiswa14 mhsMafaza = new Mahasiswa14(
+    "Mafaza Husnadani",
+    "254107060130",
+    3.75,
+    "SIB 1G"
+    );
+    mhsMafaza.tampilkanInformasi();
     }
 }
