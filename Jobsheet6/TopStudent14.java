@@ -1,7 +1,5 @@
 package Jobsheet6;
 
-import Jobsheet4.BruteForceDivideConquer.Student;
-
 public class TopStudent14 {
     Student14[] listStudents;
     int idx;
