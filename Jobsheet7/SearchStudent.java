@@ -1,8 +1,12 @@
 package Jobsheet7;
 
 public class SearchStudent {
-    Students[] listStd = new Students[5];
+    Students[] listStd; 
     int idx;
+
+    public SearchStudent(int size) {
+        listStd = new Students[size];
+    }
 
     public void add(Students std) {
         if(idx < listStd.length) {
@@ -50,5 +54,20 @@ public class SearchStudent {
         } else {
             System.out.println("Data " + x + " is not found");
         }
+    }
+
+    public int findBinarySearch(int cari, int left, int right) {
+        int mid;
+        if (right >= left) {
+            mid = (left + right) / 2;
+            if (cari == listStd[mid].nim) {
+                return (mid);
+            } else if (listStd[mid].nim > cari) {
+                return findBinarySearch(cari, left, mid - 1);
+            } else {
+                return findBinarySearch(cari, mid + 1, right);
+            }
+        }
+        return -1;
     }
 }
