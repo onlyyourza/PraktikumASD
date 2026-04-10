@@ -1,5 +1,7 @@
 package Jobsheet6;
 
+import Jobsheet4.BruteForceDivideConquer.Student;
+
 public class TopStudent14 {
     Student14[] listStudents;
     int idx;
@@ -55,7 +57,7 @@ public class TopStudent14 {
             Student14 temp = listStudents[i];
             int j = i;
 
-            while (j > 0 && listStudents[j - 1].gpa > temp.gpa) {
+            while (j > 0 && listStudents[j - 1].gpa < temp.gpa) {
                 listStudents[j] = listStudents[j - 1];
                 j--;
             }
