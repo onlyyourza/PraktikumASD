@@ -1,5 +1,4 @@
 package Jobsheet12.Queue;
-
 public class LinkedQueue14 {
 
     private QueueNode14 front;

@@ -1,7 +1,4 @@
 package Jobsheet12.Queue;
-
-// Node khusus untuk Queue berbasis Linked List.
-// Menyimpan data mahasiswa (nama, NIM, dll.) dan pointer ke node berikutnya.
 public class QueueNode14 {
     String nim;
     String name;
@@ -18,7 +15,6 @@ public class QueueNode14 {
         this.next      = null;
     }
 
-    // Cetak data node ini ke layar
     public void print() {
         System.out.println("NIM     : " + nim);
         System.out.println("Nama    : " + name);

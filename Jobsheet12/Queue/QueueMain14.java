@@ -1,5 +1,4 @@
 package Jobsheet12.Queue;
-
 import java.util.Scanner;
 
 public class QueueMain14 {
