@@ -3,10 +3,12 @@ package Jobsheet13;
 public class DoubleLinkedList14 {
     Node head;
     Node tail;
+    int size;
 
     DoubleLinkedList14(){
         head = null;
         tail = null;
+        size = 0;
     }
     boolean isEmpty(){
         return head == null;
@@ -20,6 +22,7 @@ public class DoubleLinkedList14 {
             head.prev = newNode;
             head = newNode;
         }
+        size++;
     }
     void addLast(Student14 data){
         Node newNode = new Node(data);
@@ -30,6 +33,7 @@ public class DoubleLinkedList14 {
             newNode.prev = tail;
             tail = newNode;
         }
+        size++;
     }
     void insertAfter(String key, Student14 data){
         Node newNode = new Node(data);
@@ -43,6 +47,7 @@ public class DoubleLinkedList14 {
                     newNode.prev = temp;
                     temp.next.prev = newNode;
                     temp.next = newNode;
+                    size++;
                 }
                 break;
             }
@@ -57,9 +62,11 @@ public class DoubleLinkedList14 {
             System.out.println("Double linked list is currently empty!!");
         } else if (head == tail) {
             head = tail = null;
+            size--;
         } else {
             head = head.next;
             head.prev = null;
+            size--;
         }
     }
 
@@ -68,33 +75,36 @@ public class DoubleLinkedList14 {
             System.out.println("Double linked list is currently empty!!");
         } else if (head == tail) {
             head = tail = null;
+            size--;
         } else {
             tail = tail.prev;
             tail.next = null;
+            size--;
         }
     }
 
     void remove(int index) {
         if (isEmpty()) {
             System.out.println("Double linked list is currently empty!!");
-        } else if (index < 0) {
-            System.out.println("Invalid index: index cannot be negative.");
-        } else if (index == 0) {
+            return;
+        }
+        if (index < 0 || index >= size) {
+            System.out.println("Error: Index out of bounds.");
+            return;
+        }
+        if (index == 0) {
             removeFirst();
         } else {
             Node temp = head;
             for (int i = 0; i < index; i++) {
                 temp = temp.next;
-                if (temp == null) {
-                    System.out.println("Invalid index: index exceeds the size of the list.");
-                    return;
-                }
             }
             if (temp == tail) {
                 removeLast();
             } else {
                 temp.prev.next = temp.next;
                 temp.next.prev = temp.prev;
+                size--;
             }
         }
     }
