@@ -4,6 +4,10 @@ public class StudentAssignmentStack14 {
     Student14[] stack;
     int top, size;
 
+    int countAssignments() {
+        return top + 1;
+    }
+
     StudentAssignmentStack14(int size) {
         this.size = size;
         top = -1;
@@ -56,13 +60,13 @@ public class StudentAssignmentStack14 {
     }
 
     Student14 peekFirst() {
-    if (!isEmpty()) {
-        return stack[0];
-    } else {
-        System.out.println("There is no data in Stack!!");
-        return null;
+        if (!isEmpty()) {
+            return stack[0];
+        } else {
+            System.out.println("There is no data in Stack!!");
+            return null;
+        }
     }
-}
 
     void print() {
         for (int i = 0; i <= top; i++) {

@@ -15,6 +15,7 @@ public class StudentDemo14 {
             System.out.println("3. View Top Assignment");
             System.out.println("4. View All Assignments");
             System.out.println("5. View First Assignment");
+            System.out.println("6. Count Assignments");
             System.out.print("Choose a menu: ");
             choice = scan.nextInt();
             scan.nextLine();
@@ -58,10 +59,13 @@ public class StudentDemo14 {
                         System.out.println("The first assignment comes from " + first.name);
                     }
                     break;
+                case 6:
+                    System.out.println("Number of assignments in the stack: " + stack.countAssignments());
+                    break;
                 default:
                     System.out.println("Invalid choice.");
             }
-        } while (choice >= 1 && choice <= 5);
+        } while (choice >= 1 && choice <= 6);
 
         scan.close();
     }
