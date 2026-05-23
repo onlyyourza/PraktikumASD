@@ -42,6 +42,15 @@ public class StudentQueue14 {
         return dt;
     }
 
+    void viewRear() {
+        if (!isEmpty()) {
+            System.out.println("Rear data: ");
+            data[rear].print();
+        } else {
+            System.out.println("Queue is empty!!!");
+        }
+    }
+
     void peek() {
         if (!isEmpty()) {
             System.out.println("Front data: ");
