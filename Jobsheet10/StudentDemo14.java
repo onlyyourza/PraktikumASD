@@ -40,6 +40,8 @@ public class StudentDemo14 {
                         int grade = scan.nextInt();
                         graded.grading(grade);
                         System.out.printf("Assignment grade of %s is %d\n", graded.name, grade);
+                        String binary = stack.convertToBinary(grade);
+                        System.out.printf("Assignment grade in binary is %s\n", binary);
                     }
                     break;
                 case 3:

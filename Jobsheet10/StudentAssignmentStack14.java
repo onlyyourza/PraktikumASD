@@ -68,6 +68,20 @@ public class StudentAssignmentStack14 {
         }
     }
 
+    String convertToBinary(int grade) {
+        ConversionStack14 stack = new ConversionStack14();
+        while (grade > 0) {
+            int mod = grade % 2;
+            stack.push(mod);
+            grade = grade / 2;
+        }
+        String binary = "";
+        while (!stack.isEmpty()) {
+            binary += stack.pop();
+        }
+        return binary;
+    }
+
     void print() {
         for (int i = 0; i <= top; i++) {
             System.out.println(stack[i].nim + "\t" + stack[i].name + "\t" + stack[i].className);
