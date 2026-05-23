@@ -55,6 +55,15 @@ public class StudentAssignmentStack14 {
         }
     }
 
+    Student14 peekFirst() {
+    if (!isEmpty()) {
+        return stack[0];
+    } else {
+        System.out.println("There is no data in Stack!!");
+        return null;
+    }
+}
+
     void print() {
         for (int i = 0; i <= top; i++) {
             System.out.println(stack[i].nim + "\t" + stack[i].name + "\t" + stack[i].className);

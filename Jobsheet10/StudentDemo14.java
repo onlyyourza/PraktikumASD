@@ -14,6 +14,7 @@ public class StudentDemo14 {
             System.out.println("2. Grade Assignment");
             System.out.println("3. View Top Assignment");
             System.out.println("4. View All Assignments");
+            System.out.println("5. View First Assignment");
             System.out.print("Choose a menu: ");
             choice = scan.nextInt();
             scan.nextLine();
@@ -51,10 +52,16 @@ public class StudentDemo14 {
                     System.out.println("Name\tNIM\tClass Name");
                     stack.print();
                     break;
+                case 5:
+                    Student14 first = stack.peekFirst();
+                    if (first != null) {
+                        System.out.println("The first assignment comes from " + first.name);
+                    }
+                    break;
                 default:
                     System.out.println("Invalid choice.");
             }
-        } while (choice >= 1 && choice <= 4);
+        } while (choice >= 1 && choice <= 5);
 
         scan.close();
     }
