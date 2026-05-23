@@ -81,7 +81,8 @@ public class Queue14 {
             size++;
             System.out.printf("%d is successfully added at index %d\n", dt, rear);
         } else {
-            System.out.println("Queue is full!!!");
+            System.out.println("Queue is full!!! (overflow) - program stopped.");
+            System.exit(0);
         }
     }
 
@@ -101,7 +102,8 @@ public class Queue14 {
                 }
             }
         } else {
-            System.out.println("Queue is empty!!!");
+            System.out.println("Queue is empty!!! (underflow) - program stopped.");
+            System.exit(0);
         }
         return dt;
     }
