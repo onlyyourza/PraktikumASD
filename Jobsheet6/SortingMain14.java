@@ -25,5 +25,18 @@ public class SortingMain14 {
         
         System.out.println("Sorted array (Selection Sort):");
         sorting2.print();
+        
+        System.out.println("\n---------------------------\n");
+        
+        int[] c = {40, 10, 4, 9, 3};
+        Sorting14 sorting3 = new Sorting14(c);
+
+        System.out.println("Original array:");
+        sorting3.print();
+        
+        sorting3.insertionSort();
+        
+        System.out.println("Sorted array (Insertion Sort):");
+        sorting3.print();
     }
 }
