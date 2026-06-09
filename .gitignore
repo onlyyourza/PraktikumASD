@@ -1,0 +1,5 @@
+# Claude Code local files and worktrees
+.claude/
+
+# Compiled Java class files
+*.class
