@@ -42,6 +42,16 @@ public class Main {
             System.out.println("Antrian kosong.");
             return;
         }
+        queue.printQueue();
+        System.out.print("Pilih No Antrian yang ingin dilayani : ");
+        int noAntrian = bacaInt();
+
+        Buyer dilayani = queue.removeByQueueNumber(noAntrian);
+        if (dilayani == null) {
+            System.out.println("No antrian tidak ditemukan.");
+            return;
+        }
+        
         System.out.print("Order Code : ");
         int kode = bacaInt();
         if (orders.hasCode(kode)) {
@@ -53,7 +63,6 @@ public class Main {
         System.out.print("Price      : ");
         int harga = bacaInt();
 
-        Buyer dilayani = queue.removeFront();
         orders.addOrder(new Order(kode, namaPesanan, harga));
         System.out.println(dilayani.name + " telah memesan " + namaPesanan);
     }

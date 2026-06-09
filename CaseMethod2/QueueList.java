@@ -45,6 +45,19 @@ class QueueList {
         return b;
     }
 
+    Buyer removeByQueueNumber(int queueNumber) {
+        for (QueueNode cur = head; cur != null; cur = cur.next) {
+            if (cur.queueNumber == queueNumber) {
+                if (cur.prev != null) cur.prev.next = cur.next;
+                else                  head          = cur.next;
+                if (cur.next != null) cur.next.prev = cur.prev;
+                else                  tail          = cur.prev;
+                return cur.buyer;
+            }
+        }
+        return null;
+    }
+
     void printQueue() {
         System.out.println("================================");
         System.out.println("Daftar Antrian Pembeli");
