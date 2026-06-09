@@ -6,16 +6,16 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         Student[] students = {
-            new Student("22001", "Andi", "Teknik Informatika"),
-            new Student("22002", "Budi", "Teknik Informatika"),
-            new Student("22003", "Citra", "Sistem Informasi Bisnis")
+            new Student("22001", "Andi", "Teknik Informatika", 124124),
+            new Student("22002", "Budi", "Teknik Informatika", 123912),
+            new Student("22003", "Citra", "Sistem Informasi Bisnis", 213123)
         };
 
         Book[] books = {
-            new Book("B001", "Algoritma", 2020),
-            new Book("B002", "Basis Data", 2019),
-            new Book("B003", "Pemrograman", 2021),
-            new Book("B004", "Fisika", 2024)
+            new Book("B001", "Algoritma", 2020, "Mafaza"),
+            new Book("B002", "Basis Data", 2019, "Agya"),
+            new Book("B003", "Pemrograman", 2021, "AKU"),
+            new Book("B004", "Fisika", 2024, "Mafaza")
         };
 
         BookLending[] loans = {
